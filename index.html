@@ -44,12 +44,7 @@
           
           <!-- Desktop Menu -->
           <div class="hidden md:block">
-            <div class="relative">
-              <!-- Nav Background Highlight -->
-              <div class="absolute top-0 h-10 bg-white bg-opacity-10 rounded-full transition-all duration-300 -z-10" 
-                  :style="{ left: activeNavPosition.left + 'px', width: activeNavPosition.width + 'px' }"
-                  v-if="activeNavItem"></div>
-              
+            <div class="relative">              
               <!-- Nav Items -->
               <ul class="flex space-x-2">
                 <li v-for="item in navItems" :key="item.id" class="relative">
