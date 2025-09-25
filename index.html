@@ -20,11 +20,11 @@
   <div id="app" v-cloak>
     <!-- Loading Screen -->
     <div v-if="loading" class="fixed inset-0 bg-black z-50 flex flex-col items-center justify-center">
-      <div class="text-white text-4xl font-montserrat mb-6">{{ loadingText }}</div>
+      <div class="text-white text-3xl font-montserrat mb-6">{{ loadingText }}</div>
       <div class="w-64 h-1 bg-gray-700 rounded-full overflow-hidden">
         <div class="h-full bg-white rounded-full" :style="`width: ${loadingProgress}%`"></div>
       </div>
-      <div class="text-white mt-2">{{ loadingProgress }}%</div>
+      <div class="text-white mt-2 text-xs">{{ loadingProgress }}%</div>
     </div>
 
     <!-- Navigation -->
@@ -37,8 +37,8 @@
           <!-- Logo -->
           <a href="#" class="group flex items-center space-x-2 text-white">
             <div class="flex flex-col">
-              <span class="text-2xl font-bold tracking-tight leading-none">RASOLOFONDRAMANAMBE Herinomenjanaharilala Sedera</span>
-              <span class="text-sm text-gray-400 tracking-widest uppercase">Chef de Département RH et Rémunération</span>
+              <span class="text-xl font-bold tracking-tight leading-none">RASOLOFONDRAMANAMBE Herinomenjanaharilala Sedera</span>
+              <span class="text-xs text-gray-400 tracking-widest uppercase">Chef de Département RH et Rémunération</span>
             </div>
           </a>
           
@@ -50,7 +50,7 @@
                 <li v-for="item in navItems" :key="item.id" class="relative">
                   <a 
                     :href="item.href" 
-                    class="px-5 py-2 rounded-full text-white opacity-80 hover:opacity-100 transition-all block text-sm font-medium"
+                    class="px-5 py-2 rounded-full text-white opacity-80 hover:opacity-100 transition-all block text-xs font-medium"
                     :class="{'opacity-100': activeNavItem === item.href}"
                     @click="setActiveNavItem(item.href, $event)"
                     :ref="`navItem_${item.id}`"
@@ -111,7 +111,7 @@
                 :key="item.id" 
                 :href="item.href" 
                 @click="mobileMenuOpen = false" 
-                class="text-white flex items-center py-3 border-b border-gray-700/50 hover:bg-white hover:bg-opacity-5 -mx-6 px-6 transition-colors"
+                class="text-white flex items-center py-3 border-b border-gray-700/50 hover:bg-white hover:bg-opacity-5 -mx-6 px-6 transition-colors text-sm"
               >
                 <i class="fas fa-chevron-right mr-3 text-xs text-blue-400"></i>
                 {{ item.text }}
@@ -134,11 +134,11 @@
         <div class="flex flex-col md:flex-row items-center justify-center">
           <div class="md:w-1/2 mb-10 md:mb-0 text-center md:text-left" data-aos="fade-right" data-aos-duration="1000">
             <div class="overflow-hidden">
-              <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+              <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">
                 <span class="block typewriter-text">Chef de Département RH et Rémunération</span>
               </h1>
             </div>
-            <p class="text-xl text-gray-300 mb-8 max-w-lg mx-auto md:mx-0" 
+            <p class="text-lg text-gray-300 mb-8 max-w-lg mx-auto md:mx-0" 
                data-aos="fade-up" data-aos-delay="200">
               Ayant partagé des challenges RH avec plusieurs nationalités depuis plus de 10 ans, 
               j’ai la conviction que l’entreprise performante est celle qui met en avant ses collaborateurs, 
@@ -175,20 +175,20 @@
         <div class="mt-16 flex justify-center" data-aos="fade-up" data-aos-delay="600">
           <div class="tech-stack-slider">
             <div class="flex space-x-8 tech-stack-content">
-              <div class="tech-icon"><i class="fas fa-file-excel text-3xl"></i></div>
-              <div class="tech-icon"><i class="fas fa-chart-bar text-3xl"></i></div>
-              <div class="tech-icon"><i class="fas fa-users text-3xl"></i></div>
-              <div class="tech-icon"><i class="fas fa-file-alt text-3xl"></i></div>
-              <div class="tech-icon"><i class="fas fa-balance-scale text-3xl"></i></div>
-              <div class="tech-icon"><i class="fas fa-project-diagram text-3xl"></i></div>
-              <div class="tech-icon"><i class="fas fa-database text-3xl"></i></div>
-              <div class="tech-icon"><i class="fas fa-file-excel text-3xl"></i></div>
-              <div class="tech-icon"><i class="fas fa-chart-bar text-3xl"></i></div>
-              <div class="tech-icon"><i class="fas fa-users text-3xl"></i></div>
-              <div class="tech-icon"><i class="fas fa-file-alt text-3xl"></i></div>
-              <div class="tech-icon"><i class="fas fa-balance-scale text-3xl"></i></div>
-              <div class="tech-icon"><i class="fas fa-project-diagram text-3xl"></i></div>
-              <div class="tech-icon"><i class="fas fa-database text-3xl"></i></div>
+              <div class="tech-icon"><i class="fas fa-file-excel text-2xl"></i></div>
+              <div class="tech-icon"><i class="fas fa-chart-bar text-2xl"></i></div>
+              <div class="tech-icon"><i class="fas fa-users text-2xl"></i></div>
+              <div class="tech-icon"><i class="fas fa-file-alt text-2xl"></i></div>
+              <div class="tech-icon"><i class="fas fa-balance-scale text-2xl"></i></div>
+              <div class="tech-icon"><i class="fas fa-project-diagram text-2xl"></i></div>
+              <div class="tech-icon"><i class="fas fa-database text-2xl"></i></div>
+              <div class="tech-icon"><i class="fas fa-file-excel text-2xl"></i></div>
+              <div class="tech-icon"><i class="fas fa-chart-bar text-2xl"></i></div>
+              <div class="tech-icon"><i class="fas fa-users text-2xl"></i></div>
+              <div class="tech-icon"><i class="fas fa-file-alt text-2xl"></i></div>
+              <div class="tech-icon"><i class="fas fa-balance-scale text-2xl"></i></div>
+              <div class="tech-icon"><i class="fas fa-project-diagram text-2xl"></i></div>
+              <div class="tech-icon"><i class="fas fa-database text-2xl"></i></div>
             </div>
           </div>
         </div>
@@ -197,7 +197,7 @@
       <!-- Scroll indicator -->
       <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10">
         <a href="#about" class="text-white opacity-75 hover:opacity-100 transition-opacity scroll-indicator">
-          <span class="block text-sm mb-2 text-center">Défiler vers le bas</span>
+          <span class="block text-xs mb-2 text-center">Défiler vers le bas</span>
           <div class="w-6 h-10 border-2 border-white rounded-full mx-auto flex justify-center">
             <div class="w-1 h-3 bg-white rounded-full animate-bounce mt-2"></div>
           </div>
@@ -209,7 +209,7 @@
     <section id="about" class="py-20 bg-white">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold">À propos</h2>
+          <h2 class="text-2xl md:text-3xl font-bold">À propos</h2>
           <div class="w-16 h-1 bg-black mx-auto mt-4"></div>
         </div>
         <div class="flex flex-col md:flex-row items-center justify-center">
@@ -220,24 +220,24 @@
             </div>
           </div>
           <div class="md:w-1/2 md:pl-12 fade-in-element">
-            <h3 class="text-2xl font-bold mb-4">Expert en Développement RH et Rémunération</h3>
-            <p class="text-gray-600 mb-6">Avec plus de 10 ans d’expérience dans la gestion des ressources humaines à l’échelle internationale, je suis convaincu que la performance d’une entreprise repose sur la valorisation de ses collaborateurs tout en garantissant sa pérennité. Mes compétences incluent le déploiement de politiques RH, la gestion de la rémunération, la digitalisation des processus RH, et l’accompagnement stratégique des managers.</p>
+            <h3 class="text-xl font-bold mb-4">Expert en Développement RH et Rémunération</h3>
+            <p class="text-gray-600 mb-6 text-sm">Avec plus de 10 ans d’expérience dans la gestion des ressources humaines à l’échelle internationale, je suis convaincu que la performance d’une entreprise repose sur la valorisation de ses collaborateurs tout en garantissant sa pérennité. Mes compétences incluent le déploiement de politiques RH, la gestion de la rémunération, la digitalisation des processus RH, et l’accompagnement stratégique des managers.</p>
             <div class="flex flex-wrap">
               <div class="w-full md:w-1/2 mb-6">
-                <h4 class="font-bold mb-2">Localisation</h4>
-                <ul class="text-gray-600 list-disc list-inside">
+                <h4 class="font-bold mb-2 text-sm">Localisation</h4>
+                <ul class="text-gray-600 list-disc list-inside text-xs">
                   <li>Antananarivo, Madagascar</li>
                 </ul>
               </div>
               <div class="w-full md:w-1/2 mb-6">
-                <h4 class="font-bold mb-2">Statut professionnel</h4>
-                <ul class="text-gray-600 list-disc list-inside">
+                <h4 class="font-bold mb-2 text-sm">Statut professionnel</h4>
+                <ul class="text-gray-600 list-disc list-inside text-xs">
                   <li>Chef de Département Développement RH et Rémunération, Ravinala Airports</li>
                 </ul>
               </div>
               <div class="w-full md:w-1/2 mb-6">
-                <h4 class="font-bold mb-2">Langues</h4>
-                <ul class="text-gray-600 list-disc list-inside">
+                <h4 class="font-bold mb-2 text-sm">Langues</h4>
+                <ul class="text-gray-600 list-disc list-inside text-xs">
                   <li>Français (courant)</li>
                   <li>Anglais (professionnel)</li>
                 </ul>
@@ -252,7 +252,7 @@
     <section id="education" class="py-20 bg-gray-100">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold">Formation et Cursus</h2>
+          <h2 class="text-2xl md:text-3xl font-bold">Formation et Cursus</h2>
           <div class="w-16 h-1 bg-black mx-auto mt-4"></div>
         </div>
         <div class="relative max-w-4xl mx-auto">
@@ -261,14 +261,14 @@
           
           <!-- Academic Training -->
           <div class="mb-12 relative">
-            <h3 class="text-2xl font-bold mb-4 text-center bg-gray-100 py-2 px-4 rounded-lg relative z-10 -mt-8">Cursus Académique</h3>
+            <h3 class="text-xl font-bold mb-4 text-center bg-gray-100 py-2 px-4 rounded-lg relative z-10 -mt-8">Cursus Académique</h3>
             <div class="relative space-y-8">
               <div class="flex flex-col md:flex-row items-start">
                 <div class="w-full md:w-1/2 md:pr-8 relative">
                   <div class="bg-white rounded-lg shadow-lg p-6 transform transition-all hover:-translate-y-2 fade-in-element z-10" data-aos="fade-right" data-aos-duration="1000">
-                    <h4 class="font-bold text-lg">Maîtrise en Gestion (Finance et Comptabilité)</h4>
-                    <p class="text-gray-600">Faculté DEGS, Université d’Antananarivo, Madagascar</p>
-                    <p class="text-gray-500 text-sm">2005-2006</p>
+                    <h4 class="font-bold text-base">Maîtrise en Gestion (Finance et Comptabilité)</h4>
+                    <p class="text-gray-600 text-sm">Faculté DEGS, Université d’Antananarivo, Madagascar</p>
+                    <p class="text-gray-500 text-xs">2005-2006</p>
                   </div>
                   <div class="absolute top-1/2 left-0 w-4 h-4 bg-gray-300 rounded-full transform -translate-x-1/2 -translate-y-1/2 md:hidden"></div>
                 </div>
@@ -278,9 +278,9 @@
                 <div class="hidden md:block md:w-1/2"></div>
                 <div class="w-full md:w-1/2 md:pl-8 relative">
                   <div class="bg-white rounded-lg shadow-lg p-6 transform transition-all hover:-translate-y-2 fade-in-element z-10" data-aos="fade-left" data-aos-duration="1000">
-                    <h4 class="font-bold text-lg">DEUG en Sociologie Professionnelle (Organisation, Service, Travail)</h4>
-                    <p class="text-gray-600">Faculté DEGS, Université d’Antananarivo, Madagascar</p>
-                    <p class="text-gray-500 text-sm">2005-2006</p>
+                    <h4 class="font-bold text-base">DEUG en Sociologie Professionnelle (Organisation, Service, Travail)</h4>
+                    <p class="text-gray-600 text-sm">Faculté DEGS, Université d’Antananarivo, Madagascar</p>
+                    <p class="text-gray-500 text-xs">2005-2006</p>
                   </div>
                   <div class="absolute top-1/2 left-0 w-4 h-4 bg-gray-300 rounded-full transform -translate-x-1/2 -translate-y-1/2 md:hidden"></div>
                 </div>
@@ -290,13 +290,13 @@
 
           <!-- Professional Training -->
           <div class="relative">
-            <h3 class="text-2xl font-bold mb-4 text-center bg-gray-100 py-2 px-4 rounded-lg relative z-10 -mt-8">Formations Professionnelles</h3>
+            <h3 class="text-xl font-bold mb-4 text-center bg-gray-100 py-2 px-4 rounded-lg relative z-10 -mt-8">Formations Professionnelles</h3>
             <div class="relative space-y-8">
               <div class="flex flex-col md:flex-row items-start">
                 <div class="w-full md:w-1/2 md:pr-8 relative">
                   <div class="bg-white rounded-lg shadow-lg p-6 transform transition-all hover:-translate-y-2 fade-in-element z-10" data-aos="fade-right" data-aos-duration="1000">
-                    <h4 class="font-bold text-lg">2024</h4>
-                    <ul class="text-gray-600 list-disc list-inside">
+                    <h4 class="font-bold text-base">2024</h4>
+                    <ul class="text-gray-600 list-disc list-inside text-xs">
                       <li>Déc. 24: Nouveau Code du Travail, MCI (Madagascar Conseil International), Antananarivo, Madagascar</li>
                       <li>Nov. 24: GEPP - Stratégie d'entreprise et pilotage efficace des compétences, MCI, Antananarivo, Madagascar</li>
                       <li>Juil. 24: Pilotage Paie, LEFEBVRE DALLOZ COMPETENCES, Paris, France</li>
@@ -313,8 +313,8 @@
                 <div class="hidden md:block md:w-1/2"></div>
                 <div class="w-full md:w-1/2 md:pl-8 relative">
                   <div class="bg-white rounded-lg shadow-lg p-6 transform transition-all hover:-translate-y-2 fade-in-element z-10" data-aos="fade-left" data-aos-duration="1000">
-                    <h4 class="font-bold text-lg">2023</h4>
-                    <ul class="text-gray-600 list-disc list-inside">
+                    <h4 class="font-bold text-base">2023</h4>
+                    <ul class="text-gray-600 list-disc list-inside text-xs">
                       <li>Déc. 23: Evaluation de Compétences, HR CONSULTING, Antananarivo, Madagascar</li>
                       <li>Déc. 23: Management de Projet, CCF HARMONY, Antananarivo, Madagascar</li>
                       <li>Déc. 23: Organisation personnelle et Gestion de temps, CCIFM, Antananarivo, Madagascar</li>
@@ -330,8 +330,8 @@
               <div class="flex flex-col md:flex-row items-start">
                 <div class="w-full md:w-1/2 md:pr-8 relative">
                   <div class="bg-white rounded-lg shadow-lg p-6 transform transition-all hover:-translate-y-2 fade-in-element z-10" data-aos="fade-right" data-aos-duration="1000">
-                    <h4 class="font-bold text-lg">2021</h4>
-                    <ul class="text-gray-600 list-disc list-inside">
+                    <h4 class="font-bold text-base">2021</h4>
+                    <ul class="text-gray-600 list-disc list-inside text-xs">
                       <li>Déc. 21: Démarche QSHE et Pilotage de Procédure, CCF HARMONY, Antananarivo, Madagascar</li>
                       <li>Nov. 21: Français B2 Professionnel, ALLIANCE FRANÇAISE, Antananarivo, Madagascar</li>
                       <li>Nov. 21: Technique et Conduite de recrutement, FORMATEUR GROUPE BASAN, Antananarivo, Madagascar</li>
@@ -346,8 +346,8 @@
                 <div class="hidden md:block md:w-1/2"></div>
                 <div class="w-full md:w-1/2 md:pl-8 relative">
                   <div class="bg-white rounded-lg shadow-lg p-6 transform transition-all hover:-translate-y-2 fade-in-element z-10" data-aos="fade-left" data-aos-duration="1000">
-                    <h4 class="font-bold text-lg">2018</h4>
-                    <ul class="text-gray-600 list-disc list-inside">
+                    <h4 class="font-bold text-base">2018</h4>
+                    <ul class="text-gray-600 list-disc list-inside text-xs">
                       <li>Juil. 18: Gestion de Stress et Burn-out, OSTIE, Antananarivo, Madagascar</li>
                     </ul>
                   </div>
@@ -357,8 +357,8 @@
               <div class="flex flex-col md:flex-row items-start">
                 <div class="w-full md:w-1/2 md:pr-8 relative">
                   <div class="bg-white rounded-lg shadow-lg p-6 transform transition-all hover:-translate-y-2 fade-in-element z-10" data-aos="fade-right" data-aos-duration="1000">
-                    <h4 class="font-bold text-lg">2017</h4>
-                    <ul class="text-gray-600 list-disc list-inside">
+                    <h4 class="font-bold text-base">2017</h4>
+                    <ul class="text-gray-600 list-disc list-inside text-xs">
                       <li>Janv. 17: Management Opérationnel, Jean Philippe MAS Formation, Carmen Educativa, France</li>
                     </ul>
                   </div>
@@ -370,8 +370,8 @@
                 <div class="hidden md:block md:w-1/2"></div>
                 <div class="w-full md:w-1/2 md:pl-8 relative">
                   <div class="bg-white rounded-lg shadow-lg p-6 transform transition-all hover:-translate-y-2 fade-in-element z-10" data-aos="fade-left" data-aos-duration="1000">
-                    <h4 class="font-bold text-lg">2016</h4>
-                    <ul class="text-gray-600 list-disc list-inside">
+                    <h4 class="font-bold text-base">2016</h4>
+                    <ul class="text-gray-600 list-disc list-inside text-xs">
                       <li>Juin 16: Technique d’entretien face à face, FORMATEUR GROUPE BASAN, Antananarivo, Madagascar</li>
                       <li>Juin 16: Formation en Excel avancé, IT University, Antananarivo, Madagascar</li>
                       <li>Juin 16: Correspondance d’entreprise, CNaPS, Antananarivo, Madagascar</li>
@@ -383,8 +383,8 @@
               <div class="flex flex-col md:flex-row items-start">
                 <div class="w-full md:w-1/2 md:pr-8 relative">
                   <div class="bg-white rounded-lg shadow-lg p-6 transform transition-all hover:-translate-y-2 fade-in-element z-10" data-aos="fade-right" data-aos-duration="1000">
-                    <h4 class="font-bold text-lg">2015</h4>
-                    <ul class="text-gray-600 list-disc list-inside">
+                    <h4 class="font-bold text-base">2015</h4>
+                    <ul class="text-gray-600 list-disc list-inside text-xs">
                       <li>Août 15: Andragogie, Conduite de réunion, CEPA, Antananarivo, Madagascar</li>
                       <li>Mai 15: Communication interpersonnelle, CEPA, Antananarivo, Madagascar</li>
                     </ul>
@@ -397,8 +397,8 @@
                 <div class="hidden md:block md:w-1/2"></div>
                 <div class="w-full md:w-1/2 md:pl-8 relative">
                   <div class="bg-white rounded-lg shadow-lg p-6 transform transition-all hover:-translate-y-2 fade-in-element z-10" data-aos="fade-left" data-aos-duration="1000">
-                    <h4 class="font-bold text-lg">2014</h4>
-                    <ul class="text-gray-600 list-disc list-inside">
+                    <h4 class="font-bold text-base">2014</h4>
+                    <ul class="text-gray-600 list-disc list-inside text-xs">
                       <li>Juil. 14: Comportement d’excellence, 5S, Méthode CQQCOQP, FORMATEUR GROUPE BASAN, Antananarivo, Madagascar</li>
                     </ul>
                   </div>
@@ -408,8 +408,8 @@
               <div class="flex flex-col md:flex-row items-start">
                 <div class="w-full md:w-1/2 md:pr-8 relative">
                   <div class="bg-white rounded-lg shadow-lg p-6 transform transition-all hover:-translate-y-2 fade-in-element z-10" data-aos="fade-right" data-aos-duration="1000">
-                    <h4 class="font-bold text-lg">2013</h4>
-                    <ul class="text-gray-600 list-disc list-inside">
+                    <h4 class="font-bold text-base">2013</h4>
+                    <ul class="text-gray-600 list-disc list-inside text-xs">
                       <li>Juin 13: Comportement d’excellence, 5S, Méthode CQQCOQP, FORMATEUR GROUPE BASAN, Antananarivo, Madagascar</li>
                     </ul>
                   </div>
@@ -427,14 +427,14 @@
     <section id="experience" class="py-20 bg-gray-100">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold">Expérience Professionnelle</h2>
+          <h2 class="text-2xl md:text-3xl font-bold">Expérience Professionnelle</h2>
           <div class="w-16 h-1 bg-black mx-auto mt-4"></div>
         </div>
         <div class="space-y-8">
           <div v-for="job in jobs" :key="job.id" class="bg-white rounded-lg shadow-lg p-6 transform transition-all hover:-translate-y-2 fade-in-element">
-            <h3 class="text-xl font-bold">{{ job.title }}</h3>
-            <p class="text-gray-600 font-medium">{{ job.company }} ({{ job.employees }} collaborateurs) - {{ job.period }}</p>
-            <ul class="list-disc list-inside text-gray-600 mt-4">
+            <h3 class="text-lg font-bold">{{ job.title }}</h3>
+            <p class="text-gray-600 font-medium text-sm">{{ job.company }} ({{ job.employees }} collaborateurs) - {{ job.period }}</p>
+            <ul class="list-disc list-inside text-gray-600 mt-4 text-xs">
               <li v-for="task in job.tasks" :key="task">{{ task }}</li>
             </ul>
           </div>
@@ -446,60 +446,60 @@
     <section id="skills" class="py-20 bg-gray-100">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold">Compétences</h2>
+          <h2 class="text-2xl md:text-3xl font-bold">Compétences</h2>
           <div class="w-16 h-1 bg-black mx-auto mt-4"></div>
         </div>
 
         <!-- Technical Skills -->
-        <h3 class="text-2xl font-bold mb-8 text-center">Compétences Techniques</h3>
+        <h3 class="text-xl font-bold mb-8 text-center">Compétences Techniques</h3>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <div v-for="skill in technicalSkills" :key="skill.name" class="bg-white rounded-lg shadow-lg p-8 transform transition-all hover:-translate-y-2 fade-in-element">
             <div class="flex items-center justify-center mb-6">
               <div class="w-20 h-20 rounded-full bg-gray-100 flex items-center justify-center">
-                <i :class="skill.icon + ' text-3xl'"></i>
+                <i :class="skill.icon + ' text-2xl'"></i>
               </div>
             </div>
-            <h3 class="text-xl font-bold text-center mb-4">{{ skill.name }}</h3>
+            <h3 class="text-lg font-bold text-center mb-4">{{ skill.name }}</h3>
             <div class="mb-4">
               <div class="h-2 w-full bg-gray-200 rounded-full">
                 <div class="h-full bg-gray-800 rounded-full" :style="`width: ${skill.level}%`"></div>
               </div>
-              <div class="text-right text-sm text-gray-500 mt-1">{{ skill.level }}%</div>
+              <div class="text-right text-xs text-gray-500 mt-1">{{ skill.level }}%</div>
             </div>
-            <p class="text-gray-600 text-center">{{ skill.description }}</p>
+            <p class="text-gray-600 text-center text-sm">{{ skill.description }}</p>
           </div>
         </div>
 
         <!-- Relational Skills -->
-        <h3 class="text-2xl font-bold mb-8 text-center">Compétences Relationnelles</h3>
+        <h3 class="text-xl font-bold mb-8 text-center">Compétences Relationnelles</h3>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-16 fade-in-element">
           <div v-for="skill in relationalSkills" :key="skill.name" class="bg-white rounded-lg shadow p-4 text-center transform transition-all hover:-translate-y-1">
             <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center mx-auto mb-3">
-              <i :class="skill.icon + ' text-xl'"></i>
+              <i :class="skill.icon + ' text-lg'"></i>
             </div>
-            <h4 class="font-semibold">{{ skill.name }}</h4>
+            <h4 class="font-semibold text-sm">{{ skill.name }}</h4>
           </div>
         </div>
 
         <!-- Strategic Skills -->
-        <h3 class="text-2xl font-bold mb-8 text-center">Compétences Stratégiques</h3>
+        <h3 class="text-xl font-bold mb-8 text-center">Compétences Stratégiques</h3>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-16 fade-in-element">
           <div v-for="skill in strategicSkills" :key="skill.name" class="bg-white rounded-lg shadow p-4 text-center transform transition-all hover:-translate-y-1">
             <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center mx-auto mb-3">
-              <i :class="skill.icon + ' text-xl'"></i>
+              <i :class="skill.icon + ' text-lg'"></i>
             </div>
-            <h4 class="font-semibold">{{ skill.name }}</h4>
+            <h4 class="font-semibold text-sm">{{ skill.name }}</h4>
           </div>
         </div>
 
         <!-- Additional Skills -->
-        <h3 class="text-2xl font-bold mb-8 text-center">Compétences Complémentaires</h3>
+        <h3 class="text-xl font-bold mb-8 text-center">Compétences Complémentaires</h3>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 fade-in-element">
           <div v-for="skill in additionalSkills" :key="skill.name" class="bg-white rounded-lg shadow p-4 text-center transform transition-all hover:-translate-y-1">
             <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center mx-auto mb-3">
-              <i :class="skill.icon + ' text-xl'"></i>
+              <i :class="skill.icon + ' text-lg'"></i>
             </div>
-            <h4 class="font-semibold">{{ skill.name }}</h4>
+            <h4 class="font-semibold text-sm">{{ skill.name }}</h4>
           </div>
         </div>
       </div>
@@ -509,17 +509,17 @@
     <section id="contact" class="py-20 bg-black text-white">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold">Contactez-moi</h2>
+          <h2 class="text-2xl md:text-3xl font-bold">Contactez-moi</h2>
           <div class="w-16 h-1 bg-white mx-auto mt-4"></div>
         </div>
         <div class="max-w-2xl mx-auto text-center fade-in-element">
-          <p class="text-gray-300 mb-8">Intéressé(e) par une collaboration ou une question ? N’hésitez pas à me contacter via les canaux ci-dessous.</p>
+          <p class="text-gray-300 mb-8 text-sm">Intéressé(e) par une collaboration ou une question ? N’hésitez pas à me contacter via les canaux ci-dessous.</p>
           <div class="flex justify-center space-x-8 mb-10">
             <a href="mailto:rhsedera@gmail.com" class="w-12 h-12 rounded-full bg-white bg-opacity-10 flex items-center justify-center transition-all hover:bg-opacity-20 transform hover:-translate-y-1">
-              <i class="fas fa-envelope text-xl"></i>
+              <i class="fas fa-envelope text-lg"></i>
             </a>
           </div>
-          <div class="text-gray-400">
+          <div class="text-gray-400 text-xs">
             <p>Email: rhsedera@gmail.com</p>
             <p>Localisation: Lot AKT IE 18 Bis Andohony Antanety II CR Alakamisy Fenoarivo 102 Antananarivo</p>
             <p>Téléphone: 032 49 065 72 – 034 02 065 72</p>
@@ -531,8 +531,8 @@
     <!-- Footer -->
     <footer class="py-8 bg-gray-900 text-white">
       <div class="container mx-auto px-6 text-center">
-        <p>&copy; {{ new Date().getFullYear() }} HR Portfolio. Tous droits réservés.</p>
-        <p class="text-gray-400 text-sm mt-2">Réalisé avec Vue.js & Tailwind CSS</p>
+        <p class="text-sm">&copy; {{ new Date().getFullYear() }} HR Portfolio. Tous droits réservés.</p>
+        <p class="text-gray-400 text-xs mt-2">Réalisé avec Vue.js & Tailwind CSS</p>
       </div>
     </footer>
   </div>
